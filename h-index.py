@@ -49,6 +49,7 @@ if uploaded_file is not None:
 
         st.write("h-index by Year:")
         h_index_df = pd.DataFrame(list(h_index_by_year.items()), columns=['Year', 'h-index'])
+        h_index_df = h_index_df.sort_values(by='Year', ascending=False)  # Sort years in descending order
         st.dataframe(h_index_df)
 
         # Option to download the results
