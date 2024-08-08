@@ -14,7 +14,7 @@ def calculate_h_index(citations):
 
 st.title('H-index Calculator')
 
-uploaded_file = st.file_uploader("Upload a CSV file with only the following columns: Title, Year, and Citations. This program will calculate the overall h-index from a list of publications and the h-index by year. It cannot determine h-index by author at this time.", type=["csv"])
+uploaded_file = st.file_uploader("Upload a CSV file with only the following columns: Title, Year, and Citations. Please remember to delete any file details before the first row of publication information. This program will calculate the overall h-index from a list of publications and the h-index by year. It cannot determine h-index by author at this time.", type=["csv"])
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
